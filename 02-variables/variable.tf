@@ -63,8 +63,14 @@ output "map2" {
 # terraform.tfvars -->file will automatically picked the variable
 variable "form-other-file" {}
 
-# dev.tfvars, prod.tfvars --> this type of files need to seclusively passed variable on cli with -var-file
+# dev.tfvars, prod.tfvars --> this type of files need to exclusively passed variable on cli with -var-file <filename>
 variable "x3_env" {}
 output "x3_env" {
   value = var.x3_env
+}
+
+## file name should be different, but  the file need to loaded automatically, then use auto.tfvars
+variable "x4" {}
+output "x4" {
+  value = var.x4
 }
