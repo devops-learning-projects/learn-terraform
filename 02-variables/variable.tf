@@ -59,3 +59,12 @@ variable "map" {
 output "map2" {
   value = var.map["name"]
 }
+
+# terraform.tfvars -->file will automatically picked the variable
+variable "form-other-file" {}
+
+# dev.tfvars, prod.tfvars --> this type of files need to seclusively passed variable on cli with -var-file
+variable "x3_env" {}
+output "x3_env" {
+  value = var.x3_env
+}
